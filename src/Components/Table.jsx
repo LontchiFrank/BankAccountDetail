@@ -12,18 +12,17 @@ const viewAllAccount = async () =>{
     console.log(views.data.users);
     setViewAll(views.data.users);
 }
-// const list = viewAll.map(view=><div><UserCard view={view} /></div>    
-// )
+const deleteAccount = async (id)=>{
+    // console.log(id)
+ await axios.delete(`https://goodwillbackend.herokuapp.com/deleteUserAcct/${id}`);
 
-// if(this.state.weather?.length > 0) {
-//     this.state.weather.map((element) => {
-//       return (
-//         <div className="col-md-4" key={element.id}>  // also don't forget about the passing a unique value as key property
-//           <Body city={element.location.name}/>
-//         </div>
-//       );
-//     })
-//   }
+const  newAccount = viewAll.filter(view => {return( view._id !== id)});
+
+setViewAll(newAccount);
+
+}
+
+
 useEffect(() => {
 
 viewAllAccount();
@@ -52,9 +51,18 @@ console.log(viewAll)
                     </thead>
                     <tbody>
                     {
-  viewAll && viewAll !== null ? viewAll.map(view=><UserCard view={view} />):null
-    
-  }
+  viewAll && viewAll !== null ? 
+  viewAll.map((view, key)=><UserCard view={view} key={key} id={view._id} onDelete={deleteAccount}/>)
+  :null
+//   (viewAll&&viewAll !==null ? 
+//     viewAll.filter((view)=>{  if ( view.id !== id) {
+//     return true 
+//   }else{
+//       return false
+//   }
+//  }):null) 
+ }
+
                     </tbody>
                 </table>
             </div>
