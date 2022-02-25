@@ -20,65 +20,14 @@ function FormInput() {
               role="tabpanel"
               aria-labelledby="home-tab"
             >
-              <h3 class="register-heading">Apply as a Employee</h3>
+              <h3 class="register-heading">Input Clients Information into the Platform </h3>
               <div class="row register-form">
                 <div class="col-md-6">
                   <div class="form-group mb-3">
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="First Name *"
-                      value=""
-                    />
-                  </div>
-                  <div class="form-group mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Last Name *"
-                      value=""
-                    />
-                  </div>
-                  <div class="form-group mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Password *"
-                      value=""
-                    />
-                  </div>
-                  <div class="form-group mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Confirm Password *"
-                      value=""
-                    />
-                  </div>
-                  <div class="form-group mb-3">
-                    <div class="maxl">
-                      <label class="radio inline">
-                        <input
-                          type="radio"
-                          name="gender"
-                          value="male"
-                          checked
-                        />
-                        <span> Male </span>
-                      </label>
-                      <label class="radio inline">
-                        <input type="radio" name="gender" value="female" />
-                        <span>Female </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-3">
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Your Email *"
+                      placeholder="Your Names *"
                       value=""
                     />
                   </div>
@@ -93,24 +42,30 @@ function FormInput() {
                       value=""
                     />
                   </div>
-                  <div class="form-group mb-3">
-                    <select class="form-control">
-                      <option class="hidden" selected disabled>
-                        Please select your Sequrity Question
-                      </option>
-                      <option>What is your Birthdate?</option>
-                      <option>What is Your old Phone Number</option>
-                      <option>What is your Pet Name?</option>
-                    </select>
-                  </div>
+                
+                  
+                </div>
+                <div class="col-md-6">
                   <div class="form-group mb-3">
                     <input
-                      type="text"
+                      type="email"
                       class="form-control"
-                      placeholder="Enter Your Answer *"
+                      placeholder="Your Email *"
                       value=""
                     />
                   </div>
+                  <div class="form-group mb-3">
+                    <input
+                      type="number"
+                      minlength="10"
+                      maxlength="10"
+                      name="txtEmpPhone"
+                      class="form-control"
+                      placeholder="Amount Installed *"
+                      value=""
+                    />
+                  </div>
+              
                   <input
                     type="submit"
                     class="btnRegister"
@@ -132,18 +87,11 @@ function FormInput() {
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="First Name *"
+                      placeholder="Name *"
                       value=""
                     />
                   </div>
-                  <div class="form-group mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Last Name *"
-                      value=""
-                    />
-                  </div>
+                 
                   <div class="form-group mb-3">
                     <input
                       type="email"
@@ -154,7 +102,7 @@ function FormInput() {
                   </div>
                   <div class="form-group mb-3">
                     <input
-                      type="text"
+                      type="number"
                       maxlength="10"
                       minlength="10"
                       class="form-control"
@@ -164,32 +112,7 @@ function FormInput() {
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="form-group mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Password *"
-                      value=""
-                    />
-                  </div>
-                  <div class="form-group mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      placeholder="Confirm Password *"
-                      value=""
-                    />
-                  </div>
-                  <div class="form-group mb-3">
-                    <select class="form-control">
-                      <option class="hidden" selected disabled>
-                        Please select your Sequrity Question
-                      </option>
-                      <option>What is your Birthdate?</option>
-                      <option>What is Your old Phone Number</option>
-                      <option>What is your Pet Name?</option>
-                    </select>
-                  </div>
+                 
                   <div class="form-group mb-3">
                     <input
                       type="text"
