@@ -9,12 +9,11 @@ const [viewAll, setViewAll] = useState();
 const viewAllAccount = async () =>{
 
     const views=  await axios.get("https://goodwillbackend.herokuapp.com/users/viewAll");
-    console.log(views.data.users);
     setViewAll(views.data.users);
 }
 const deleteAccount = async (id)=>{
     // console.log(id)
- await axios.delete(`https://goodwillbackend.herokuapp.com/deleteUserAcct/${id}`);
+ await axios.delete(`https://goodwillbackend.herokuapp.com/users/deleteUserAcct/${id}`);
 
 const  newAccount = viewAll.filter(view => {return( view._id !== id)});
 
@@ -24,14 +23,9 @@ setViewAll(newAccount);
 
 
 useEffect(() => {
-
 viewAllAccount();
-
-
-
 }, [])
 
-console.log(viewAll)
 
 
   return (
@@ -52,15 +46,8 @@ console.log(viewAll)
                     <tbody>
                     {
   viewAll && viewAll !== null ? 
-  viewAll.map((view, key)=><UserCard view={view} key={key} id={view._id} onDelete={deleteAccount}/>)
+  viewAll.map((view, key)=><UserCard view={view} key={key} id={view._id} onDelete={deleteAccount} />)
   :null
-//   (viewAll&&viewAll !==null ? 
-//     viewAll.filter((view)=>{  if ( view.id !== id) {
-//     return true 
-//   }else{
-//       return false
-//   }
-//  }):null) 
  }
 
                     </tbody>

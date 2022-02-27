@@ -30,7 +30,6 @@ console.log(accounts);
 const handleSubmit=(e)=>{
   e.preventDefault();
 createAccount(formData);
-console.log(formData)
 setFormData({
   name:"",
   email:"",
